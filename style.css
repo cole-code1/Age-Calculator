@@ -12,7 +12,8 @@ body{
 
 }
 #age{
-    border-radius: 5%;
+    border-radius: 1%;
+    border-style: double;
     background:whitesmoke;
     box-shadow: red 1px 2px 40px;
     padding: 10px ;
