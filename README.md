@@ -19,5 +19,5 @@ The Age Calculator is a simple application that allows users to calculate their 
 ## live
 (https://cole-code1.github.io/Age-Calculator/)
 
-## DEMO
-https://app.screencastify.com/v2/manage/videos/oHZv8TuPIJVCOAC6IDog
+## Slides
+https://docs.google.com/presentation/d/1Jr0sNAWYq0cj6oNC3tdDdpqmJfZRtsbnu3FJVpkhIU4/edit?usp=sharing
