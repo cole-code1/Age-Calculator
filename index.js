@@ -31,36 +31,22 @@ const name = document.getElementById('name').value;
     document.getElementById('Months').textContent = months;
     document.getElementById('Days').textContent = days;
 });
-const form = document.getElementById('user-form');
-const resultsDiv = document.getElementById('output')
 
-// Handle form submission
-form.addEventListener('submit', function(event) {
+const formEl = document.getElementById('ageForm');
+
+formEl.addEventListener('submit',(event) => {
     event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const birthdate = document.getElementById('birthdate').value;
+    const formData = new FormData(formEl);
+    const data = Object.fromEntries(formData);
 
-    // Send POST request to save user
-    fetch('http://localhost:3000/users', {
+    fetch('http://localhost:3000/users',{
         method: 'POST',
-        body: JSON.stringify({
-            
-                id: 1,
-                name: "Collins",
-                dob: "2005-08-10",
-                currentDate: "2024-10-17",
-                calculatedAge: {
-                  years: 19,
-                  months: 2,
-                  days: 7
-                }
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
+        headers:{
+            'Content-Type': 'application/json'
         },
-      })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
-    })
+        body: JSON.stringify(data)
+    });
+})
+    
 
